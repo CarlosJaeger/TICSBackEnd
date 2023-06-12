@@ -8,8 +8,6 @@ router.get('/', (req , res ) => {
 
 });
 
-
-
 /* Gets the data from db for graphs */
 router.get('/Grafico',(req,res)=>{
     pool.query('SELECT * FROM registre ORDER BY time_added DESC LIMIT 100;', (error:any, results:any) => {
